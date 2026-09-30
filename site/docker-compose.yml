@@ -1,0 +1,12 @@
+services:
+  site:
+    image: nginx:alpine
+    container_name: firaw-h4k-site
+    restart: unless-stopped
+    network_mode: host
+    volumes:
+      - ./public:/usr/share/nginx/html:ro
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    read_only: true
+    tmpfs: [/var/cache/nginx, /var/run]
+    security_opt: ["no-new-privileges:true"]

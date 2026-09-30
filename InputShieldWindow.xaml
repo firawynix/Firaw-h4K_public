@@ -1,0 +1,10 @@
+<Window x:Class="FirawH4K.InputShieldWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent" Cursor="None"
+        Topmost="True" ShowInTaskbar="False" ShowActivated="True"
+        Focusable="True" PreviewKeyDown="Input_KeyDown"
+        PreviewMouseDown="Input_MouseDown" PreviewMouseUp="Input_MouseDown"
+        PreviewMouseWheel="Input_MouseWheel">
+    <Grid />
+</Window>

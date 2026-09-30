@@ -1,0 +1,22 @@
+<Window x:Class="FirawH4K.StopOverlayWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Width="116"
+        Height="42"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        Topmost="True"
+        ShowInTaskbar="False"
+        ShowActivated="False">
+    <Button x:Name="StopButton"
+            Content="■  PARAR"
+            Click="StopButton_Click"
+            Background="#D94B61"
+            Foreground="White"
+            BorderBrush="#FF9DAA"
+            BorderThickness="1"
+            Padding="14,7"
+            FontWeight="Bold"
+            ToolTip="Parar o Firaw agora" />
+</Window>

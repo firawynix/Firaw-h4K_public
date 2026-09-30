@@ -1,0 +1,11 @@
+<Window x:Class="FirawH4K.LiveFightWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Width="340" Height="340" WindowStyle="None" AllowsTransparency="True"
+        Background="Transparent" Topmost="True" ShowInTaskbar="False"
+        ShowActivated="False" IsHitTestVisible="False">
+    <Canvas x:Name="EffectCanvas" Width="340" Height="340" IsHitTestVisible="False">
+        <Image x:Name="Rim" Width="306" Height="306" Canvas.Left="17" Canvas.Top="17"
+               IsHitTestVisible="False" RenderTransformOrigin="0.5,0.5" />
+    </Canvas>
+</Window>

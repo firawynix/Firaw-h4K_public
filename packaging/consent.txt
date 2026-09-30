@@ -1,0 +1,24 @@
+FIRAW h4K - TERMOS DE USO E CONSENTIMENTO
+
+Firaw h4K e um aplicativo de entretenimento com tema visual de hack.
+As telas, alertas e efeitos desse tema sao simulacoes visuais.
+
+Os efeitos podem incluir flashes, luzes intermitentes, movimento intenso e
+alteracoes visuais da area de trabalho. Nao ative efeitos se voce tiver
+sensibilidade a flashes; interrompa o uso se sentir desconforto.
+
+O bloqueio de teclado e mouse e opcional e exige sua escolha dentro do
+aplicativo. Durante esse modo, a entrada pode permanecer bloqueada ate voce
+pressionar Ctrl+Alt+F12 para interromper os efeitos e liberar os controles.
+Ctrl+Alt+Del continua disponivel como recurso de seguranca do Windows.
+
+Instalar nao autoriza nem ativa o bloqueio. Use somente no seu computador
+ou com consentimento explicito de quem o utiliza. Salve seu trabalho antes
+de iniciar os efeitos.
+
+O instalador nao inicia o aplicativo nem configura inicio automatico com
+o Windows. Para atualizar ou remover, primeiro encerre os efeitos com
+Ctrl+Alt+F12 e feche o aplicativo. A instalacao nao encerra processos.
+
+Ao aceitar, voce confirma que leu estes avisos e concorda com essas
+condicoes de uso. A ativacao de cada recurso continua sob seu controle.

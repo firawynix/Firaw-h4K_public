@@ -1,0 +1,122 @@
+<Window x:Class="FirawH4K.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Firaw - h4K"
+        Icon="Assets/firaw-beetle-v3.ico"
+        Width="510"
+        Height="790"
+        MinWidth="450"
+        MinHeight="560"
+        WindowStartupLocation="CenterScreen"
+        Background="{StaticResource PageBackground}"
+        Loaded="Window_Loaded"
+        Closing="Window_Closing">
+    <Grid Margin="18">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <DockPanel Grid.Row="0" Margin="0,0,0,16">
+            <Border DockPanel.Dock="Left" Width="62" Height="62" CornerRadius="12"
+                    Background="#0D1723" BorderBrush="#2A7989" BorderThickness="1" Margin="0,0,13,0">
+                <Image x:Name="MascotImage" Source="Assets/firaw-beetle-v3.png" Width="54" Height="54"
+                       Stretch="Uniform" RenderTransformOrigin="0.5,0.5">
+                    <Image.RenderTransform>
+                        <ScaleTransform ScaleX="0.82" ScaleY="0.82" />
+                    </Image.RenderTransform>
+                </Image>
+            </Border>
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock Text="FIRAW - h4K" FontSize="24" FontWeight="Bold" />
+                <TextBlock x:Name="ModeBadgeText" Text="MODO SEGURO" Foreground="{StaticResource Accent}"
+                           FontSize="11" FontWeight="Bold" Margin="0,4,0,0" />
+                <TextBlock x:Name="SubtitleText" Text="Desktop Goose • mascote autônomo"
+                           Foreground="{StaticResource TextMuted}" FontSize="11" Margin="0,2,0,0" />
+            </StackPanel>
+        </DockPanel>
+
+        <Grid Grid.Row="1">
+            <Border Background="{StaticResource PanelBackground}" BorderBrush="{StaticResource PanelBorder}" BorderThickness="1" CornerRadius="18" Padding="20,16">
+                <Viewbox Stretch="Uniform" StretchDirection="DownOnly" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <StackPanel x:Name="ConfigurationContent" Width="410">
+                    <TextBlock Text="Configuração" FontSize="18" FontWeight="SemiBold" />
+                    <TextBlock Text="Tudo fica explícito e reversível" Foreground="{StaticResource TextMuted}" Margin="0,4,0,14" />
+
+                    <TextBlock Text="Comportamento do Goose" Foreground="{StaticResource TextMuted}" />
+                    <ComboBox x:Name="MovementMode" Margin="0,6,0,12" MinHeight="26" SelectedIndex="1">
+                        <ComboBoxItem Content="Passeio livre" />
+                        <ComboBoxItem Content="Caminhada aleatória 360°" />
+                        <ComboBoxItem Content="Patrulha pelas bordas" />
+                    </ComboBox>
+
+                    <TextBlock Text="Velocidade do besouro e da animação" Foreground="{StaticResource TextMuted}" />
+                    <Slider x:Name="SpeedSlider" Minimum="0.5" Maximum="10" Value="4.5" Margin="0,7,0,12"
+                            TickFrequency="0.5" ValueChanged="SpeedSlider_ValueChanged" />
+
+                    <TextBlock Text="Atalho para parar imediatamente" Foreground="{StaticResource TextMuted}" />
+                    <ComboBox x:Name="HotkeyCombo" Margin="0,6,0,12" MinHeight="26" SelectionChanged="HotkeyCombo_SelectionChanged" SelectedIndex="0">
+                        <ComboBoxItem Content="Ctrl + Alt + F12" Tag="F12" />
+                        <ComboBoxItem Content="Ctrl + Alt + F11" Tag="F11" />
+                        <ComboBoxItem Content="Ctrl + Shift + F12" Tag="SHIFT_F12" />
+                    </ComboBox>
+
+                    <Button Content="ESCOLHER TELAS" Click="MonitorsButton_Click" Height="31" Margin="0,0,0,12" />
+
+                    <Border Background="#102632" BorderBrush="#2A7989" BorderThickness="1" CornerRadius="9" Padding="10" Margin="0,0,0,14">
+                        <TextBlock x:Name="SafetyHintText" Text="Segure Esc por 1 segundo para parar. O modo normal é reversível e não bloqueia teclado, mouse ou o Windows."
+                                   Foreground="#A6EAF4" TextWrapping="Wrap" />
+                    </Border>
+
+                    <Button x:Name="StartButton" Content="ATIVAR DESKTOP GOOSE" Click="StartButton_Click" Height="44" />
+                    <Button x:Name="DestructiveButton" Click="DestructiveButton_Click" Height="55" Margin="0,10,0,0" Foreground="White">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#164C5E" />
+                                <Setter Property="Foreground" Value="White" />
+                                <Setter Property="Cursor" Value="Hand" />
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border x:Name="ButtonSurface" Background="{TemplateBinding Background}" BorderBrush="#22D3EE" BorderThickness="1" CornerRadius="5">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                            </Border>
+                                            <ControlTemplate.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter TargetName="ButtonSurface" Property="Background" Value="#226D7F" />
+                                                </Trigger>
+                                                <Trigger Property="IsPressed" Value="True">
+                                                    <Setter TargetName="ButtonSurface" Property="Background" Value="#103C4D" />
+                                                </Trigger>
+                                                <Trigger Property="IsEnabled" Value="False">
+                                                    <Setter TargetName="ButtonSurface" Property="Background" Value="#1B3340" />
+                                                    <Setter Property="Foreground" Value="#8094A9" />
+                                                </Trigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Button.Style>
+                        <StackPanel HorizontalAlignment="Center">
+                            <TextBlock Text="MODO DESESPERO" FontWeight="Bold" HorizontalAlignment="Center" />
+                            <TextBlock Text="TRAVA MOUSE E TECLADO · CTRL+ALT+F12 PARA SAIR" FontSize="10" HorizontalAlignment="Center" />
+                        </StackPanel>
+                    </Button>
+                    <TextBlock Text="Modo desespero: confronto contínuo e marcas persistentes. A cada 3 impactos, 1 marca se recupera. Sem limite de tempo. Ctrl+Alt+F12 encerra; Ctrl+Alt+Del continua disponível."
+                               Foreground="#A6D4E3" FontSize="11" TextWrapping="Wrap" Margin="0,7,0,0" />
+
+                    <TextBlock x:Name="StatusText" Text="Status: aguardando ativação" Foreground="{StaticResource TextMuted}" Margin="0,12,0,0" TextWrapping="Wrap" />
+                    <TextBlock x:Name="MonitorStatusText" Text="Telas ativas: verificadas ao iniciar" Foreground="{StaticResource TextMuted}" Margin="0,6,0,0" FontSize="11" TextWrapping="Wrap" />
+                </StackPanel>
+                </Viewbox>
+            </Border>
+        </Grid>
+
+        <StackPanel Grid.Row="2" Margin="0,10,0,0">
+            <TextBlock Text="Firaw - h4K • fecha para a bandeja" FontSize="10" Foreground="{StaticResource TextMuted}" />
+            <TextBlock x:Name="FooterStopHint" Text="segure Esc ou use o atalho configurado" FontSize="11" Margin="0,3,0,0" Foreground="{StaticResource Accent}" />
+        </StackPanel>
+    </Grid>
+</Window>

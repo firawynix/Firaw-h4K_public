@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>Firaw-h4K</AssemblyName>
+    <RootNamespace>FirawH4K</RootNamespace>
+    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <Company>Firawynix</Company>
+    <Product>Firaw h4K</Product>
+    <ApplicationIcon>Assets\firaw-beetle-v3.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Resource Include="Assets\firaw.ico" />
+    <Resource Include="Assets\firaw-beetle.ico" />
+    <Resource Include="Assets\firaw-beetle-v3.ico" />
+    <Resource Include="Assets\firaw-beetle-v3.png" />
+    <Resource Include="Assets\firaw-mascot.png" />
+    <Resource Include="Assets\firaw-mascot-slime.png" />
+    <Resource Include="Assets\firaw-walk-1.png" />
+    <Resource Include="Assets\firaw-walk-2.png" />
+    <Resource Include="Assets\firaw-walk-3.png" />
+    <Resource Include="Assets\firaw-slime-stream.png" />
+    <Resource Include="Assets\firaw-walk-clean-1.png" />
+    <Resource Include="Assets\firaw-walk-clean-2.png" />
+    <Resource Include="Assets\firaw-walk-clean-3.png" />
+    <Resource Include="Assets\firaw-walk-clean-4.png" />
+    <Resource Include="Assets\firaw-slime-buildup.png" />
+    <Resource Include="Assets\firaw-slime-impact.png" />
+    <Resource Include="Assets\firaw-icon-source.png" />
+    <Resource Include="Assets\cyber-beetle-h4k.png" />
+    <Resource Include="Assets\cyber-beetle-firawynix.png" />
+    <Resource Include="Assets\cyber-beetle-red.png" />
+    <Resource Include="Assets\cyber-beetle-h4k-dark.png" />
+    <Resource Include="Assets\cyber-beetle-red-dark.png" />
+    <Resource Include="Assets\abyss-border-v2.png" />
+    <Resource Include="Assets\abyss-plaque-v2.png" />
+    <Resource Include="Assets\abyss-impact-v2.png" />
+    <Resource Include="Assets\abyss-border-v3.png" />
+    <Resource Include="Assets\abyss-impact-v3.png" />
+    <Resource Include="Assets\abyss-border-v4.png" />
+    <Resource Include="Assets\volcanic-lava-v1.png" />
+  </ItemGroup>
+</Project>

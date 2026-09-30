@@ -1,0 +1,17 @@
+bin/
+obj/
+dist*/
+publish/
+release/
+site/public/downloads/
+Assets/StoreLogo.png
+Assets/Square44x44Logo.png
+Assets/Square150x150Logo.png
+*.user
+*.suo
+.vs/
+.notebook/
+*.pfx
+*.p12
+*.key
+.env*

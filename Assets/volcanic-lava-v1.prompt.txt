@@ -1,0 +1,4 @@
+Generated with the built-in image generation tool, 2026-09-29.
+Asset: volcanic-lava-v1.png
+
+Use case: photorealistic-natural. Asset type: square game texture for animated volcanic lava inside a small desktop impact hole. Primary request: photorealistic close overhead view of an active lava lake surface filling the entire square edge to edge. Black fractured basalt crust floating over glowing deep orange and vivid red molten lava. Highly irregular organic broken crust shapes with intricate granular rock, thin branching incandescent cracks and larger rippling molten channels. No regular hexagons, no geometric tiling, no uniform grid. Clear legible texture at thumbnail size, cinematic realism, sinister volcanic heat. Orthographic directly overhead, no horizon, no border, no crater rim, no objects, no typography, no watermark. Colors: charcoal basalt, orange-red lava, occasional pale yellow hot highlights. Opaque background, square 1024x1024.
